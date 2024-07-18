@@ -70,8 +70,11 @@ st.write("# Correlation Analysis:")
 
 correlation_matrix = filtered_df_cars.select_dtypes('number').corr()
 
-viz_correlation = sns.heatmap(correlation_matrix,center=0,cmap='coolwarm',annot=True
-)
+viz_correlation = sns.heatmap(correlation_matrix, 
+								center=0,
+								cmap='coolwarm',
+                                annot=True
+								)
 st.pyplot(viz_correlation.figure)
 
 st.write("Très forte corrélation entre cubic_inches et cylindres et entre cubic_inches et hp. Information redondante ?")
